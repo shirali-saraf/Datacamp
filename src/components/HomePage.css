@@ -37,13 +37,16 @@ NavLink{
    
 }
 .section2{
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 40%;
 }
 .prize_img{
     position: sticky;
     top: 0px;
-    max-width: 500px;
+    /* max-width: 500px; */
+    width: 80%;
     max-height: 600px;
 }
 .prize_img:hover{
@@ -70,11 +73,62 @@ NavLink{
     box-shadow: 1px 1px 4px black;
 }
 .about{
-    position: sticky;
-    top: 500px;
+    /* position: sticky;
+    top: 500px; */
     font-weight: bold;
 }
 .prize_content{
     display: flex;  
     justify-content: space-between;
+}
+
+/* responsive------------- */
+@media screen and (max-width: 1096px){
+    .prize_img{
+        width: 70%;
+        /* height: 400px; */
+    }
+    .section1{
+        width: 50%;
+    }
+    .section2{
+        width: 50%;
+    }
+    .section1_content{
+        width: 400px;
+    }
+}
+@media screen and (max-width: 854px){
+    .prize_img{
+        width: 80%;
+        /* height: 400px; */
+    }
+    .section2{
+        width: 30%;
+    }
+    .section1{
+        width:70%
+    }
+    .about{
+        font-size: 0.9rem;
+    }
+    .section1_content{
+        width: 300px;
+    }
+}
+@media screen and (max-width: 454px){
+    .section1_content{
+        width: 200px;
+    }
+}
+@media screen and (max-width: 307px){
+    .home_prizesection{
+        flex-direction: column-reverse;
+    }
+    .section1{
+        width: 100%;
+    }
+    .section2{
+        width: 100%;
+    }
 }
